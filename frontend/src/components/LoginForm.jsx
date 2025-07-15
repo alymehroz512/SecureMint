@@ -8,6 +8,7 @@ import {
 import { useSpring, animated as Animated } from 'react-spring';
 import { login } from '../redux/slices/authSlice';
 import { showNotification } from '../redux/slices/notificationSlice';
+import loginImage from '../../public/login-image.svg';
 import '../styles/Login.css';
 
 export default function LoginForm() {
@@ -124,8 +125,18 @@ export default function LoginForm() {
           <FaLock className="ribbon-icon me-2" />Login
         </div>
         <Animated.div style={fadeIn} className="project-content">
+          <div className="welcome-text text-center mb-3">
+            <h3>Welcome Back</h3>
+            <p>Sign in to continue your journey</p>
+          </div>
+          <img
+            src={loginImage}
+            alt="Login illustration"
+            className="login-image img-fluid mb-0"
+          />
+          <hr className="animated-hr" />
           <Form className="contact-form">
-            <Form.Group className="mb-3 form-group-with-icon" controlId="formEmail">
+            <Form.Group className="display-flex flex-column mb-3 form-group-with-icon" controlId="formEmail">
               <div className="form-label-with-icon">
                 <FaEnvelope className="form-icon" />
                 <Form.Label className="form-label">Email</Form.Label>
