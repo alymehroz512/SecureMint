@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+.notification {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(100% - 20px);
+  max-width: 540px;
+  box-sizing: border-box;
+}
+
+.notification.success {
+  background-color: #008000;
+}
+
+.notification.error {
+  background-color: #FF0000;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.notify-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .notification {
+    bottom: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    max-width: 220px;
+    padding: 0.8rem 1rem;
+  }
+
+  .notification-content {
+    font-size: 0.9rem;
+  }
+
+  .notify-icon {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .notification {
+    bottom: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+    max-width: 200px;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .notification-content {
+    font-size: 0.85rem;
+  }
+
+  .notify-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .notification {
+    bottom: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+    max-width: 180px;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .notification-content {
+    font-size: 0.8rem;
+  }
+
+  .notify-icon {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .notification {
+    bottom: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+    max-width: 170px;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .notification-content {
+    font-size: 0.75rem;
+  }
+
+  .notify-icon {
+    font-size: 0.85rem;
+  }
+}
