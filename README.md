@@ -101,7 +101,7 @@ SecureMint is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applic
 ```bash
 # Clone the repository
 git clone https://github.com/alymehroz512/securemint.git
-cd securemint/backend
+cd backend
 
 # Install dependencies
 npm install express mongoose jsonwebtoken bcryptjs nodemailer cors dotenv
@@ -125,7 +125,7 @@ EMAIL_PASS=your-app-password
 
 ```bash
 # Navigate to the frontend directory
-cd ../frontend
+cd frontend
 
 # Install dependencies
 npm install react react-dom @reduxjs/toolkit axios bootstrap react-router-dom react-tsparticles react-spring
