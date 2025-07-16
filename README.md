@@ -110,8 +110,8 @@ npm install express mongoose jsonwebtoken bcryptjs nodemailer cors dotenv
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/securemint
 JWT_SECRET=your_jwt_secret_key
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
+GMAIL_USER=your-email@gmail.com
+GMAIL_PASS=your-app-password
 ```
 
 - Start MongoDB (e.g., `mongod` for local, or connect to Atlas)
@@ -131,7 +131,7 @@ cd frontend
 npm install react react-dom @reduxjs/toolkit axios bootstrap react-router-dom react-tsparticles react-spring
 
 # Create a .env file in the frontend directory:
-VITE_API_URL=http://localhost:5000/api/auth
+VITE_API_URL=http://localhost:5000/api
 
 # Run the development server
 npm run dev
