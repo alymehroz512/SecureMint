@@ -8,7 +8,7 @@ import {
 import { useSpring, animated as Animated } from 'react-spring';
 import { login } from '../redux/slices/authSlice';
 import { showNotification } from '../redux/slices/notificationSlice';
-import loginImage from '../../public/login-image.svg';
+import loginImage from '/login-image.svg';
 import '../styles/Login.css';
 
 export default function LoginForm() {

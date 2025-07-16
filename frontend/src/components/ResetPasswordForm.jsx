@@ -13,9 +13,12 @@ import {
   FaCheck,
   FaUndo,
 } from 'react-icons/fa';
-import { useSpring, animated as Animated } from 'react-spring';
+import { useSpring, animated as Animated } from '@react-spring/web';
 import { sendOtp, verifyOtp, resetPassword } from '../redux/slices/authSlice';
 import { showNotification } from '../redux/slices/notificationSlice';
+import resetKeyImage from '/reset-password-image.svg';
+import otpImage from '/otp-image.svg';
+import newKeyImage from '/new-password-image.svg';
 import '../styles/ResetPassword.css';
 
 export default function ResetPasswordForm() {
@@ -146,7 +149,7 @@ export default function ResetPasswordForm() {
       dispatch(showNotification({
         message: isSmallScreen
           ? msg === 'Email not found' ? 'Email not found' : 'OTP send failed'
-          : msg === 'Email not found' ? 'Email not found. Please check or sign up.' : 'Failed to send OTP Email not found. Please try again.',
+          : msg === 'Email not found' ? 'Email not found. Please check or sign up.' : 'Failed to send OTP. Please try again.',
         type: 'error'
       }));
     } finally {
@@ -208,7 +211,7 @@ export default function ResetPasswordForm() {
     <>
       {isSubmitting ? (
         <>
-          <FaSpinner className="me-2 spin" />
+          <FaSpinner className="spinner-icon me-2" />
           {loadingText}
         </>
       ) : (
@@ -224,10 +227,36 @@ export default function ResetPasswordForm() {
     <Container className="reset-password-container">
       <Animated.div style={cardAnimation} className="project-card glass-bg">
         <div className="project-ribbon">
-          <FaKey className="me-2" />
+          <FaKey className="ribbon-icon me-2" />
           {step === 1 ? 'Reset Password' : step === 2 ? 'Verify OTP' : 'Set New Password'}
         </div>
         <Animated.div style={fadeIn} className="project-content">
+          <div className="welcome-text text-center mb-3">
+            {step === 1 && (
+              <>
+                <h3>Reset Your Password</h3>
+                <p>Enter your email to receive an OTP</p>
+              </>
+            )}
+            {step === 2 && (
+              <>
+                <h3>Verify OTP</h3>
+                <p>Enter the 6-digit OTP sent to your email</p>
+              </>
+            )}
+            {step === 3 && (
+              <>
+                <h3>Set New Password</h3>
+                <p>Create a new secure password</p>
+              </>
+            )}
+          </div>
+          <img
+            src={step === 1 ? resetKeyImage : step === 2 ? otpImage : newKeyImage}
+            alt={step === 1 ? 'Reset Password illustration' : step === 2 ? 'OTP illustration' : 'New Password illustration'}
+            className="login-image img-fluid mb-0"
+          />
+          <hr className="animated-hr" />
           {step === 1 && (
             <Form className="contact-form">
               <Form.Group className="mb-3 form-group-with-icon" controlId="formEmail">
@@ -253,7 +282,7 @@ export default function ResetPasswordForm() {
                 {renderButtonContent(<FaPaperPlane />, 'Send OTP', 'Sending OTP...')}
               </Button>
               <p className="form-link">
-                Back to <Link to="/login" className="text-link" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder', textUnderlineOffset: '3px' }}>Login</Link>
+                Back to <Link to="/login" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder', textUnderlineOffset: '3px' }}>Login</Link>
               </p>
             </Form>
           )}
@@ -282,7 +311,7 @@ export default function ResetPasswordForm() {
                 {renderButtonContent(<FaCheck />, 'Verify OTP', 'Verifying...')}
               </Button>
               <p className="form-link">
-                Back to <Link to="/login" className="text-link" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder', textUnderlineOffset: '3px' }}>Login</Link>
+                Back to <Link to="/login" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder', textUnderlineOffset: '3px' }}>Login</Link>
               </p>
             </Form>
           )}
@@ -339,7 +368,7 @@ export default function ResetPasswordForm() {
                 {renderButtonContent(<FaUndo />, 'Reset Password', 'Resetting...')}
               </Button>
               <p className="form-link">
-                Back to <Link to="/login" className="text-link" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder', textUnderlineOffset: '3px' }}>Login</Link>
+                Back to <Link to="/login" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder', textUnderlineOffset: '3px' }}>Login</Link>
               </p>
             </Form>
           )}

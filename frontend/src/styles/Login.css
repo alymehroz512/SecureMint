@@ -175,29 +175,24 @@
 
 .animated-hr {
   border: none;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #004030, transparent);
-  animation: slideIn 1.5s ease-in-out infinite;
+  height: 4px;
+  background: linear-gradient(to right, rgba(0, 64, 48, 0), #004030, rgba(0, 64, 48, 0));
+  background-size: 200% 100%;
+  animation: slideGlow 2s linear infinite;
 }
 
-@keyframes slideIn {
+@keyframes slideGlow {
   0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scaleX(1);
-    opacity: 1;
+    background-position: 200% 0;
   }
   100% {
-    transform: scaleX(0);
-    opacity: 0;
+    background-position: -200% 0;
   }
 }
 
 .login-image {
-  width: 350px;
-  height: 250px;
+  width: 550px;
+  height: 450px;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
@@ -242,6 +237,10 @@
     width: 150px;
     height: 100px;
   }
+
+  .animated-hr {
+    height: 3px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -275,6 +274,10 @@
     width: 120px;
     height: 80px;
   }
+
+  .animated-hr {
+    height: 2px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -288,8 +291,6 @@
     padding: 1rem 0.5rem;
   }
 }
-
-/* Inside your existing Login.css */
 
 .ribbon-icon {
   vertical-align: middle;

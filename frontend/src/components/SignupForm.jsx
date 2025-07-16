@@ -6,9 +6,10 @@ import {
   FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash,
   FaSpinner, FaUserPlus, FaTag
 } from 'react-icons/fa';
-import { useSpring, animated as Animated } from 'react-spring';
+import { useSpring, animated as Animated } from '@react-spring/web';
 import { register } from '../redux/slices/authSlice';
 import { showNotification } from '../redux/slices/notificationSlice';
+import signUpImage from '/sigin-image.svg';
 import '../styles/Signup.css';
 
 export default function SignupForm() {
@@ -116,9 +117,19 @@ export default function SignupForm() {
     <Container className="signup-container">
       <Animated.div style={cardAnimation} className="project-card glass-bg">
         <div className="project-ribbon">
-          <FaTag className='ribbon-icon me-2' />Sign Up
+          <FaTag className="ribbon-icon me-2" />Sign Up
         </div>
         <Animated.div style={fadeIn} className="project-content">
+          <div className="welcome-text text-center mb-3">
+            <h3>Join Us Today</h3>
+            <p>Create your account to start your journey</p>
+          </div>
+          <img
+            src={signUpImage}
+            alt="Signup illustration"
+            className="login-image img-fluid mb-0"
+          />
+          <hr className="animated-hr" />
           <Form className="contact-form">
             <Form.Group className="mb-3 form-group-with-icon" controlId="formFirstName">
               <div className="form-label-with-icon">
@@ -228,7 +239,15 @@ export default function SignupForm() {
 
             <p className="form-link">
               Already have an account?{' '}
-              <Link to="/login" style={{ color: '#004030', textDecoration: 'underline', fontWeight: 'bolder' }}>
+              <Link
+                to="/login"
+                style={{
+                  color: '#004030',
+                  textDecoration: 'underline',
+                  fontWeight: 'bolder',
+                  textUnderlineOffset: '3px',
+                }}
+              >
                 Login
               </Link>
             </p>
