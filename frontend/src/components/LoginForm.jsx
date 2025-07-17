@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   FaEnvelope, FaLock, FaEye, FaEyeSlash, FaSpinner, FaKey
 } from 'react-icons/fa';
-import { useSpring, animated as Animated } from 'react-spring';
+import { useSpring, animated as Animated } from '@react-spring/web';
 import { login } from '../redux/slices/authSlice';
 import { showNotification } from '../redux/slices/notificationSlice';
 import loginImage from '/login-image.svg';
