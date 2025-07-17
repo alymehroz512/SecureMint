@@ -6,25 +6,26 @@ SecureMint is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applic
 
 ## Table of Contents
 
-- Features
-  - User Authentication
-  - Frontend UI/UX
-  - State Management
-  - Notifications
-  - Routing
-- Technologies Used
-  - Frontend
-  - Backend
-  - Tooling
-- Installation Instructions
-  - Prerequisites
-  - Backend Setup
-  - Frontend Setup
-- Usage
-- Screenshots
-- Contributing Guidelines
-- License
-- Contact
+- [SecureMint - Secure Authentication Platform](#securemint---secure-authentication-platform)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+    - [User Authentication](#user-authentication)
+    - [Frontend UI/UX](#frontend-uiux)
+    - [State Management](#state-management)
+    - [Notifications](#notifications)
+    - [Routing](#routing)
+  - [Technologies Used](#technologies-used)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+    - [Tooling](#tooling)
+  - [Installation Instructions](#installation-instructions)
+    - [Prerequisites](#prerequisites)
+    - [Backend Setup](#backend-setup)
+    - [Frontend Setup](#frontend-setup)
+  - [Usage](#usage)
+  - [Contributing Guidelines](#contributing-guidelines)
+  - [License](#license)
+  - [Contact](#contact)
 
 ---
 
@@ -186,4 +187,3 @@ For questions or collaboration, reach out via:
 ---
 
 > **SecureMint** — Built with security and style.
-
