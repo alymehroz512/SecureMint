@@ -184,7 +184,6 @@ export default function SignupForm() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -200,7 +199,6 @@ export default function SignupForm() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -216,7 +214,6 @@ export default function SignupForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -232,7 +229,6 @@ export default function SignupForm() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
               <span
                 className="password-toggle-icon"
@@ -255,7 +251,6 @@ export default function SignupForm() {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
               <span
                 className="password-toggle-icon"

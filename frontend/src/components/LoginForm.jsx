@@ -189,7 +189,6 @@ export default function LoginForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -205,7 +204,6 @@ export default function LoginForm() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                style={{backgroundColor: '#F5F7FA'}}
               />
               <span
                 className="password-toggle-icon"
