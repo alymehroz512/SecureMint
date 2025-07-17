@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Button, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -27,6 +27,46 @@ export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Initialize particles.js
+    if (window.particlesJS) {
+      window.particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#004030' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#004030',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'repulse' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          }
+        },
+        retina_detect: true
+      });
+    }
+  }, []);
 
   const fadeIn = useSpring({
     from: { opacity: 0, transform: 'translateY(20px)' },
@@ -115,7 +155,8 @@ export default function SignupForm() {
 
   return (
     <Container className="signup-container">
-      <Animated.div style={cardAnimation} className="project-card glass-bg">
+      <div id="particles-js" className="particles-bg"></div>
+      <Animated.div style={cardAnimation} className="project-card">
         <div className="project-ribbon">
           <FaTag className="ribbon-icon me-2" />Sign Up
         </div>
@@ -143,6 +184,7 @@ export default function SignupForm() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -158,6 +200,7 @@ export default function SignupForm() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -173,6 +216,7 @@ export default function SignupForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -188,6 +232,7 @@ export default function SignupForm() {
                 value={formData.password}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
               <span
                 className="password-toggle-icon"
@@ -210,6 +255,7 @@ export default function SignupForm() {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
               <span
                 className="password-toggle-icon"
