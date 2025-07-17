@@ -1,6 +1,6 @@
 # SecureMint - Secure Authentication Platform
 
-SecureMint is a full-stack MERN (MongoDB, Express.js, React, Node.js) web application engineered for secure and user-friendly authentication. It offers robust user management—including signup, login, and OTP-based password resets—protected by JWT authentication and built atop a reliable MongoDB database. The modern frontend features a responsive glassmorphism design, interactive #C1E2A4 particle effects, and smooth animations, delivering both visual appeal and seamless usability.
+SecureMint is a full-stack MERN (MongoDB, Express.js, React, Node.js) web application engineered for secure and user-friendly authentication. It offers robust user management—including signup, login, and OTP-based password resets—protected by JWT authentication and built atop a reliable MongoDB database. The modern frontend features a responsive glassmorphism design, interactive particle effects, and smooth animations, delivering both visual appeal and seamless usability.
 
 ---
 
@@ -37,18 +37,18 @@ SecureMint is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applic
 - Protected dashboard accessible only to authenticated users
 
 ### Frontend UI/UX
-- Responsive glassmorphism design with #C1E2A4 borders and ribbon-style headers
-- Interactive #C1E2A4 particle animations with hover effects
+- Responsive glassmorphism design with borders and ribbon-style headers
+- Interactive particle animations with hover effects
 - Smooth animations: fade-in for cards, scale on hover, slide-in notifications
 - Optimized layout for mobile and desktop screens
 - Modern dark theme with Quicksand font
 
 ### State Management
 - Efficient handling with Redux for authentication and notifications
-- Custom error boundary component with #C1E2A4 styling
+- Custom error boundary component with styling
 
 ### Notifications
-- Dynamic slide-in notifications for success, error, and info messages with #C1E2A4 accents
+- Dynamic slide-in notifications for success, error, and info messages with accents
 
 ### Routing
 - Seamless navigation: signup, login, password reset, and home routes, with a default redirect to login
@@ -66,7 +66,7 @@ SecureMint is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applic
 - **react-bootstrap** (^5.3.3): Styled components
 - **react-icons** (^5.3.0): Icon library
 - **axios** (^1.7.7): HTTP client
-- **CSS**: Custom styling (glassmorphism, #C1E2A4 accents)
+- **CSS**: Custom styling (glassmorphism, #004030 accents)
 
 ### Backend
 - **Node.js** (^18.x): JavaScript runtime
@@ -146,7 +146,7 @@ npm run build
 
 - Access the app at [http://localhost:5173](http://localhost:5173) after starting both servers.
 - Navigate through signup, login, password reset, and the protected dashboard.
-- Interact with the #C1E2A4 particle animations and glassmorphism effects.
+- Interact with the particle animations and glassmorphism effects.
 - Receive real-time notifications for user actions.
 
 ---
