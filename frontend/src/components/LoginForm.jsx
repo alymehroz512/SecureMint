@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Button, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -18,6 +18,46 @@ export default function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Initialize particles.js
+    if (window.particlesJS) {
+      window.particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#004030' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#004030',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'repulse' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          }
+        },
+        retina_detect: true
+      });
+    }
+  }, []);
 
   const fadeIn = useSpring({
     from: { opacity: 0, transform: 'translateY(20px)' },
@@ -95,7 +135,7 @@ export default function LoginForm() {
       navigate('/home');
     } catch (error) {
       const msg = error.message || 'Login failed';
-      console.log('Login error message:', msg); // Debug log to check exact error message
+      console.log('Login error message:', msg);
 
       if (msg === 'Email not found') {
         dispatch(showNotification({
@@ -120,7 +160,8 @@ export default function LoginForm() {
 
   return (
     <Container className="login-container">
-      <Animated.div style={cardAnimation} className="project-card glass-bg">
+      <div id="particles-js" className="particles-bg"></div>
+      <Animated.div style={cardAnimation} className="project-card">
         <div className="project-ribbon">
           <FaLock className="ribbon-icon me-2" />Login
         </div>
@@ -148,6 +189,7 @@ export default function LoginForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
             </Form.Group>
 
@@ -163,6 +205,7 @@ export default function LoginForm() {
                 value={formData.password}
                 onChange={handleChange}
                 required
+                style={{backgroundColor: '#F5F7FA'}}
               />
               <span
                 className="password-toggle-icon"
