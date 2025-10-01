@@ -1,0 +1,27 @@
+.error-boundary-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4c3b6e;
+}
+
+.error-boundary-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.error-boundary-container p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-btn {
+  background-color: #4c3b6e !important;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 8px 20px;
+}

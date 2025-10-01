@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand';
+  background: #fff; /* Dark background to complement #C1E2A4 particles */
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
